@@ -1,0 +1,206 @@
+/* =========================================================
+   NovaBrowser – Dark Theme QSS
+   Palette:
+     background-deep  : #0f1117
+     background-mid   : #181c27
+     background-panel : #1e2235
+     border           : #2a2f45
+     accent-blue      : #4d8ef0
+     accent-blue-dark : #2d6fd4
+     text-primary     : #e8eaf0
+     text-muted       : #7a8099
+     danger           : #e05555
+     success          : #3ecf8e
+   ========================================================= */
+
+/* ── Global ──────────────────────────────────────────────── */
+QMainWindow, QWidget {
+    background-color: #0f1117;
+    color: #e8eaf0;
+    font-family: "Segoe UI", "Inter", sans-serif;
+    font-size: 13px;
+}
+
+/* ── Toolbar ─────────────────────────────────────────────── */
+QToolBar {
+    background-color: #181c27;
+    border: none;
+    border-bottom: 1px solid #2a2f45;
+    padding: 4px 8px;
+    spacing: 4px;
+}
+
+QToolBar::separator {
+    background-color: #2a2f45;
+    width: 1px;
+    margin: 4px 6px;
+}
+
+/* ── Nav Buttons ─────────────────────────────────────────── */
+QToolButton {
+    background-color: transparent;
+    color: #e8eaf0;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 16px;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+QToolButton:hover {
+    background-color: #2a2f45;
+    color: #ffffff;
+}
+
+QToolButton:pressed {
+    background-color: #4d8ef0;
+    color: #ffffff;
+}
+
+QToolButton:disabled {
+    color: #3a3f55;
+}
+
+/* ── URL Bar ─────────────────────────────────────────────── */
+QLineEdit#urlBar {
+    background-color: #1e2235;
+    color: #e8eaf0;
+    border: 1.5px solid #2a2f45;
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-size: 13px;
+    selection-background-color: #4d8ef0;
+    min-height: 30px;
+}
+
+QLineEdit#urlBar:focus {
+    border-color: #4d8ef0;
+    background-color: #232840;
+}
+
+QLineEdit#urlBar:hover {
+    border-color: #3a3f60;
+}
+
+/* ── Tab Bar ─────────────────────────────────────────────── */
+QTabWidget::pane {
+    border: none;
+    background-color: #0f1117;
+}
+
+QTabBar {
+    background-color: #181c27;
+    border-bottom: 1px solid #2a2f45;
+}
+
+QTabBar::tab {
+    background-color: #181c27;
+    color: #7a8099;
+    border: none;
+    border-right: 1px solid #2a2f45;
+    padding: 8px 16px;
+    min-width: 120px;
+    max-width: 220px;
+    font-size: 12px;
+}
+
+QTabBar::tab:selected {
+    background-color: #1e2235;
+    color: #e8eaf0;
+    border-bottom: 2px solid #4d8ef0;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #1a1f30;
+    color: #c0c4d8;
+}
+
+QTabBar::close-button {
+    image: none;
+    subcontrol-position: right;
+}
+
+/* ── Progress Bar ────────────────────────────────────────── */
+QProgressBar#loadProgress {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    max-height: 3px;
+    min-height: 3px;
+    text-align: center;
+}
+
+QProgressBar#loadProgress::chunk {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #4d8ef0,
+        stop:0.5 #7b5ef8,
+        stop:1 #3ecf8e
+    );
+    border-radius: 0;
+}
+
+/* ── Status Bar ──────────────────────────────────────────── */
+QStatusBar {
+    background-color: #181c27;
+    color: #7a8099;
+    border-top: 1px solid #2a2f45;
+    font-size: 11px;
+    padding: 0 8px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+/* ── Scroll Bars ─────────────────────────────────────────── */
+QScrollBar:vertical {
+    background-color: #0f1117;
+    width: 8px;
+    margin: 0;
+    border: none;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #2a2f45;
+    border-radius: 4px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #4d8ef0;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+    background: none;
+}
+
+/* ── Menu / Context ──────────────────────────────────────── */
+QMenu {
+    background-color: #1e2235;
+    color: #e8eaf0;
+    border: 1px solid #2a2f45;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 6px 24px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #4d8ef0;
+    color: #ffffff;
+}
+
+/* ── Tooltip ─────────────────────────────────────────────── */
+QToolTip {
+    background-color: #1e2235;
+    color: #e8eaf0;
+    border: 1px solid #4d8ef0;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+}
